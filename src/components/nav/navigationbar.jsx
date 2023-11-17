@@ -1,8 +1,28 @@
-import { Link, Navbar, NavbarBrand, NavbarContent, NavbarItem } from "@nextui-org/react";
+import {
+  Link,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@nextui-org/react";
+import { useState } from "react";
 
 export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuItems = ["Home", "About Us", "Colonies", "The Program", "Planets"];
+
   return (
-    <Navbar className='w-screen bg-transparent fixed' maxWidth='xl' height={"250px"} isBlurred={false}>
+    <Navbar
+      className='w-screen bg-transparent fixed'
+      maxWidth='xl'
+      height={"250px"}
+      isBlurred={false}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className='sm:hidden' />
       <NavbarBrand>
         <div className='w-1/12 mx-4'>
           <svg
@@ -39,7 +59,7 @@ export default function Navigation() {
           Star<span className='to-action from-actionHover bg-gradient-to-b bg-clip-text text-transparent'>Quest</span>
         </p>
       </NavbarBrand>
-      <NavbarContent justify='end'>
+      <NavbarContent justify='end' className='hidden sm:flex gap-4'>
         <NavbarItem isActive className='mx-2'>
           <Link
             color='foreground'
@@ -86,6 +106,20 @@ export default function Navigation() {
           </Link>
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu className='bg-black/60 backdrop-blur-lg'>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"}
+              className='w-full text-white font-semibold text-2xl tracking-tighter uppercase hover:text-action hover:transition-all py-4'
+              href='#'
+              size='lg'
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }
