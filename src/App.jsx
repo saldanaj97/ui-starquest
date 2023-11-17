@@ -1,17 +1,12 @@
 import "./App.css";
 import Navigation from "./components/nav/navigationbar";
+import Mars from "./components/planets/mars";
 
 function App() {
   return (
     <>
-      <header>
         <Navigation />
-      </header>
-      <body>
-        <main>
-          <h1 className="text-5xl">StarQuest</h1>
-        </main>
-      </body>
+        <Mars />
     </>
   );
 }
