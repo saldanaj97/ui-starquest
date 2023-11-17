@@ -16,13 +16,12 @@ export default function Navigation() {
 
   return (
     <Navbar
-      className='w-screen bg-transparent fixed'
+      className='w-screen bg-transparent fixed md:my-20 my-4'
       maxWidth='xl'
-      height={"250px"}
       isBlurred={false}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className='sm:hidden' />
+      <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} className='md:hidden' />
       <NavbarBrand>
         <div className='w-1/12 mx-4'>
           <svg
@@ -59,7 +58,7 @@ export default function Navigation() {
           Star<span className='to-action from-actionHover bg-gradient-to-b bg-clip-text text-transparent'>Quest</span>
         </p>
       </NavbarBrand>
-      <NavbarContent justify='end' className='hidden sm:flex gap-4'>
+      <NavbarContent justify='end' className='hidden md:flex gap-4'>
         <NavbarItem isActive className='mx-2'>
           <Link
             color='foreground'
