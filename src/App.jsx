@@ -1,12 +1,17 @@
-import { useState } from "react";
 import "./App.css";
+import Navigation from "./components/nav/navigationbar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-      <h1 className="text-5xl">StarQuest</h1>
+      <header>
+        <Navigation />
+      </header>
+      <body>
+        <main>
+          <h1 className="text-5xl">StarQuest</h1>
+        </main>
+      </body>
     </>
   );
 }
