@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Button, Image } from "@nextui-org/react";
 import marsImg from "../../assets/images/mars.png";
 
-export default function Planet() {
+export default function PlanetInfo({ planet }) {
+  const { name, nickname, moons, radius, distanceFromSun, orbitalPeriod } = planet;
+
   return (
     <div className='flex items-center justify-center h-screen'>
       <div className='relative uppercase w-full mx-20'>
@@ -19,8 +22,8 @@ export default function Planet() {
           <div className='flex flex-col'>
             <Image className='w-full h-full object-cover -rotate-45' src={marsImg} alt='Mars' />
             <div className='absolute inset-0 flex flex-col items-center justify-center text-white uppercase z-20'>
-              <h1 className='text-9xl font-bold uppercase'>Mars</h1>
-              <h2 className='text-2xl font-semibold'>The Red Planet</h2>
+              <h1 className='text-9xl font-bold uppercase'>{name}</h1>
+              <h2 className='text-2xl font-semibold'>{nickname}</h2>
             </div>
             <Button
               radius='full'
@@ -32,19 +35,19 @@ export default function Planet() {
           <div className='flex flex-col text-right tracking-tighter w-1/3'>
             <div className='mb-4'>
               <p className='text-3xl'>Moons</p>
-              <p className='text-2xl font-thin'>Phobos, Deimos</p>
+              <p className='text-2xl font-thin'>{moons}</p>
             </div>
             <div className='mb-4'>
               <p className='text-3xl'>Radius</p>
-              <p className='text-2xl font-thin'>3,390 km or 2,106 mi</p>
+              <p className='text-2xl font-thin'>{radius}</p>
             </div>
             <div className='mb-4'>
               <p className='text-3xl'>Distance From Sun</p>
-              <p className='text-2xl font-thin'>228 million km or 142 million mi</p>
+              <p className='text-2xl font-thin'>{distanceFromSun}</p>
             </div>
             <div className='mb-4'>
               <p className='text-3xl'>Orbital Period</p>
-              <p className='text-2xl font-thin'>687 Earth Days </p>
+              <p className='text-2xl font-thin'>{orbitalPeriod}</p>
             </div>
           </div>
         </div>
