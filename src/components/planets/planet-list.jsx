@@ -103,3 +103,5 @@ export const planets = {
     image: "pluto.png",
   },
 };
+
+export const planetList = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"];

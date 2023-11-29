@@ -1,9 +1,7 @@
 import { Button } from "@nextui-org/react";
 import { useState } from "react";
 import PlanetInfo from "./planet";
-import { planets } from "./planet-list";
-
-const PlanetsToDisplay = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto"];
+import { planetList, planets } from "./planet-list";
 
 const mars = {
   name: "Mars",
@@ -23,7 +21,7 @@ export default function Planet() {
 
   return (
     <div>
-      {PlanetsToDisplay.map((planet) => {
+      {planetList.map((planet) => {
         console.log(planets[planet]);
         return <PlanetInfo planet={planets[planet]} key={planet} />;
       })}
