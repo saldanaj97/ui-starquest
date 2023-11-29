@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Button, Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import marsImg from "../../assets/images/mars.png";
 
 export default function PlanetInfo({ planet }) {
@@ -25,12 +25,6 @@ export default function PlanetInfo({ planet }) {
               <h1 className='text-9xl font-bold uppercase'>{name}</h1>
               <h2 className='text-2xl font-semibold'>{nickname}</h2>
             </div>
-            <Button
-              radius='full'
-              className='w-1/2 m-auto mt-4 bg-gradient-to-t from-action to-actionHover text-white shadow-lg px-24 py-8 uppercase text-lg font-semibold tracking-tighter hover:transition-all'
-            >
-              Start Tour
-            </Button>
           </div>
           <div className='flex flex-col text-right tracking-tighter w-1/3'>
             <div className='mb-4'>
