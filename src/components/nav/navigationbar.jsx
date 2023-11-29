@@ -16,7 +16,7 @@ export default function Navigation() {
 
   return (
     <Navbar
-      className='w-screen bg-transparent fixed md:my-20 my-4'
+      className='bg-transparent fixed md:my-20 my-4'
       maxWidth='xl'
       isBlurred={false}
       onMenuOpenChange={setIsMenuOpen}
