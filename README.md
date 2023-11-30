@@ -15,8 +15,8 @@ Starquest is a web application developed using Vite, React, and Tailwind CSS. It
 
 ## Screenshots
 
-![Screenshot 1]('screenshots/screenshot1.png')
-![Screenshot 2]('screenshots/screenshot2.png')
+![Screenshot 1](screenshots/screenshot1.png)
+![Screenshot 2](screenshots/screenshot2.png)
 
 ## Installation
 
