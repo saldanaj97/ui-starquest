@@ -30,7 +30,7 @@ export default function PlanetInfo({ planet }) {
             <p className='text-2xl font-light normal-case md:mr-16'>{description}</p>
           </div>
           <div className='flex flex-col'>
-            <Image className='w-full h-full object-cover' src={planetImage} alt='Mars' />
+            <Image className='object-cover' src={planetImage} alt='planet-img' width={700} height={700} />
             <div className='absolute inset-0 flex flex-col items-center justify-center text-white uppercase z-20'>
               <h1 className='text-9xl font-bold uppercase'>{name}</h1>
               <h2 className='text-2xl font-semibold'>{nickname}</h2>
