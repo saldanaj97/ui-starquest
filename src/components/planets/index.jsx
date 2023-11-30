@@ -15,7 +15,7 @@ export default function Planet() {
       })}
       <Button
         radius='full'
-        className='sticky bottom-96 z-10 w-1/4 bg-gradient-to-t from-action to-actionHover text-white shadow-lg px-24 py-8 uppercase text-lg font-semibold tracking-tighter hover:transition-all'
+        className='sticky bottom-96 z-20 w-1/4 bg-gradient-to-t from-action to-actionHover text-white shadow-lg px-24 py-8 uppercase text-lg font-semibold tracking-tighter hover:transition-all'
       >
         Start Tour
       </Button>

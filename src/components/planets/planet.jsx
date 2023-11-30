@@ -1,9 +1,25 @@
 /* eslint-disable react/prop-types */
 import { Image } from "@nextui-org/react";
-import marsImg from "../../assets/images/planets/mars.png";
+import { useEffect, useState } from "react";
 
 export default function PlanetInfo({ planet }) {
+  const [planetImage, setPlanetImage] = useState(null);
   const { name, nickname, description, moons, radius, distanceFromSun, orbitalPeriod } = planet;
+
+  useEffect(() => {
+    // Load the image dynamically based on the planet name
+    import(`../../assets/images/planets/${name.toLowerCase()}.png`)
+      .then((image) => {
+        setPlanetImage(image.default);
+      })
+      .catch((error) => {
+        console.error("Error loading image:", error);
+      });
+  }, [name]);
+
+  if (!planetImage) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className='flex items-center justify-center h-screen'>
@@ -14,7 +30,7 @@ export default function PlanetInfo({ planet }) {
             <p className='text-2xl font-light normal-case md:mr-16'>{description}</p>
           </div>
           <div className='flex flex-col'>
-            <Image className='w-full h-full object-cover -rotate-45' src={marsImg} alt='Mars' />
+            <Image className='w-full h-full object-cover' src={planetImage} alt='Mars' />
             <div className='absolute inset-0 flex flex-col items-center justify-center text-white uppercase z-20'>
               <h1 className='text-9xl font-bold uppercase'>{name}</h1>
               <h2 className='text-2xl font-semibold'>{nickname}</h2>

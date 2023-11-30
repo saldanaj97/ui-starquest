@@ -9,7 +9,6 @@ export const planets = {
     distanceFromSun: "57.9 million km or 35.98 million mi",
     orbitalPeriod: "88 Earth Days",
     image: "mercury.png",
-    color: "#B5B5B5",
   },
   venus: {
     name: "Venus",
@@ -21,7 +20,6 @@ export const planets = {
     distanceFromSun: "108.2 million km or 67.24 million mi",
     orbitalPeriod: "225 Earth Days",
     image: "venus.png",
-    color: "#F97C5C",
   },
   earth: {
     name: "Earth",
@@ -33,7 +31,6 @@ export const planets = {
     distanceFromSun: "149.6 million km or 92.96 million mi",
     orbitalPeriod: "365.25 Days",
     image: "earth.png",
-    color: "#2F80ED",
   },
   mars: {
     name: "Mars",
@@ -45,7 +42,6 @@ export const planets = {
     distanceFromSun: "228 million km or 142 million mi",
     orbitalPeriod: "687 Earth Days",
     image: "mars.png",
-    color: "#EA2A4F",
   },
   jupiter: {
     name: "Jupiter",
